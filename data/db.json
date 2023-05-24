@@ -1,0 +1,106 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Computer",
+      "price": "2807",
+      "checked": "on"
+    },
+    {
+      "id": 2,
+      "name": "printer",
+      "price": 400,
+      "checked": false
+    },
+    {
+      "id": 3,
+      "name": "smart phone",
+      "price": 1000,
+      "checked": false
+    },
+    {
+      "id": 5,
+      "name": "clavier",
+      "price": 100,
+      "checked": false
+    },
+    {
+      "name": "zineb",
+      "price": 10,
+      "checked": false,
+      "id": 6
+    },
+    {
+      "name": "oufir",
+      "price": "105",
+      "checked": "on",
+      "id": 7
+    },
+    {
+      "name": "zinebvvv",
+      "price": 10,
+      "checked": true,
+      "id": 8
+    },
+    {
+      "name": "zineb",
+      "price": 10,
+      "checked": "on",
+      "id": 9
+    },
+    {
+      "name": "zineb",
+      "price": 10,
+      "checked": false,
+      "id": 11
+    },
+    {
+      "name": "zineb",
+      "price": 10,
+      "checked": false,
+      "id": 12
+    },
+    {
+      "name": "zineb",
+      "price": 10,
+      "checked": false,
+      "id": 13
+    },
+    {
+      "name": "zineb",
+      "price": 10,
+      "checked": "on",
+      "id": 14
+    },
+    {
+      "name": "zineb",
+      "price": 10,
+      "checked": "on",
+      "id": 15
+    },
+    {
+      "name": "zzzzzzzzz",
+      "price": "10000",
+      "checked": "on",
+      "id": 17
+    },
+    {
+      "name": "aaaaaaaaaaa",
+      "price": "1",
+      "checked": false,
+      "id": 18
+    },
+    {
+      "name": "lala",
+      "price": "15220",
+      "checked": "on",
+      "id": 19
+    },
+    {
+      "name": "loulou",
+      "price": "1",
+      "checked": "on",
+      "id": 20
+    }
+  ]
+}
