@@ -1,23 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheckCircle, faCircle, faEdit, faSearch, faTrash } from "@fortawesome/free-solid-svg-icons"
 //import axios from 'axios'
-import { deleteProduct, getProducts, checkProduct } from '../app/app';
+import { deleteProduct, getProducts, checkProduct, AppContext } from '../app/app';
 import { useNavigate } from 'react-router-dom';
 
 export default function Products() {
 
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
   const navigate =useNavigate();
-  const [state, setState] = useState({
-    products: [],
-    currentPage: 1,
-    pageSize: 3,
-    keyword: "",
-    totalPages: 0
-  }
 
-  );
+
+  const [state, setState] = useContext(AppContext);
 
 
   useEffect(() => { handleGetProducts(state.keyword, state.currentPage, state.pageSize); }, []

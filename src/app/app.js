@@ -1,4 +1,5 @@
 import axios from "axios";
+import { createContext, useState } from "react";
 
 export const productApi = axios.create({
     baseURL: "http://localhost:7000",
@@ -27,3 +28,20 @@ export const checkProduct = (produit) => {
 export const updateproduct = (produit) => {
     return productApi.put(`/products/${produit.id}`, produit);
 }
+
+export const AppContext = createContext();
+
+export const useAppState =() => {
+    const initialState =
+    {
+        products: [],
+        currentPage: 1,
+        pageSize: 5,
+        keyword: "",
+        totalPages: 0
+      };
+
+      const appState= useState(initialState);
+      return appState;
+}
+

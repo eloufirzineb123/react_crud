@@ -5,8 +5,10 @@ import Home from './components/Home';
 import Products from './components/Products';
 import NewProduct from'./components/NewProduct';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect, useState } from 'react';
+import {  useEffect, useState } from 'react';
 import EditProduct from './components/EditProduct';
+import { AppContext, useAppState } from './app/app';
+import State from './components/State';
 
 function App() {
   const [currentRoute, setCurrentRoute] = useState();
@@ -15,9 +17,10 @@ function App() {
     setCurrentRoute(path.slice(1,path.length));
   },[]);
   return (
+<AppContext.Provider value={useAppState()}  >
 
     <BrowserRouter>
-      <nav className='m-1 p-1 border border-info'>
+      <nav className='m-1 p-1 border border-info navbar navbar-expand-lg navbar-light by-light'>
         <ul className="nav na-pills">
           <li >
             <Link onClick={() => setCurrentRoute("home")}
@@ -33,6 +36,11 @@ function App() {
           </li>
 
         </ul>
+        <ul className= "nav navbar-nav" >
+          <li> 
+            <State></State>
+          </li>
+        </ul>
       </nav>
 
 
@@ -45,7 +53,14 @@ function App() {
       </Routes>
 
     </BrowserRouter>
+      
+</AppContext.Provider>
   );
 }
+
+
+
+
+
 
 export default App;

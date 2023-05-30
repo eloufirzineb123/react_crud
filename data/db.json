@@ -13,12 +13,6 @@
       "checked": false
     },
     {
-      "id": 3,
-      "name": "smart phone",
-      "price": 1000,
-      "checked": false
-    },
-    {
       "id": 5,
       "name": "clavier",
       "price": 100,
@@ -67,28 +61,16 @@
       "id": 13
     },
     {
+      "id": 14,
       "name": "zineb",
       "price": 10,
-      "checked": "on",
-      "id": 14
+      "checked": "on"
     },
     {
       "name": "zineb",
       "price": 10,
       "checked": "on",
       "id": 15
-    },
-    {
-      "name": "zzzzzzzzz",
-      "price": "10000",
-      "checked": "on",
-      "id": 17
-    },
-    {
-      "name": "aaaaaaaaaaa",
-      "price": "1",
-      "checked": false,
-      "id": 18
     },
     {
       "name": "lala",
