@@ -4,6 +4,7 @@ import { faCheckCircle, faCircle, faEdit, faSearch, faTrash } from "@fortawesome
 //import axios from 'axios'
 import { deleteProduct, getProducts, checkProduct, AppContext } from '../app/app';
 import { useNavigate } from 'react-router-dom';
+import SearchForm from './SearchForm';
 
 export default function Products() {
 
@@ -76,21 +77,8 @@ export default function Products() {
       <div className='row'>
         <div className='col-md-6'>
           <div className='card m-1'>
-            <div className='card-body '>
-              <form onSubmit={handleSearch}>
-                <div className='row g-2'>
-                  <div className='col-auto'>
-                    <input
-                      value={query}
-                      onChange={(e) => setQuery(e.target.value)} className='form-control'></input>
-                  </div>
-                  <div className='col-auto'>
-                    <button className='btn btn-success'>
-                      <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
-                    </button>
-                  </div>
-                </div>
-              </form>
+            <div className='card-body'>
+              <SearchForm handleSearch ={handleSearch} query={query}  setQuery= {setQuery}> </SearchForm>
             </div>
           </div>
           <div className='card m-1'>
@@ -142,7 +130,7 @@ export default function Products() {
                 {
                   (new Array(state.totalPages).fill(0).map(
                     (v, index) => (
-                      <li>
+                      <li key={index+1}>
                         <button onClick={() => handleGoTopage(index + 1)} className={index + 1 === state.currentPage ? 'btn btn-info ms-1' : 'btn btn-outline-info ms-1'}> {index + 1} </button>
                       </li>
                     )
